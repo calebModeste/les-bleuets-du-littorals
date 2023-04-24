@@ -1,0 +1,14 @@
+uuid: 5d2f7b5a-8591-4159-81d3-eb589560d1b4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.tuteur
+  module:
+    - user
+id: user_remove_role_action.tuteur
+label: 'Enlever le rôle tuteur des utilisateurs sélectionnés'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: tuteur

@@ -16,9 +16,14 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "drupal/admin_toolbar": "3.3",
+        "drupal/captcha": "1.10",
         "drupal/core-composer-scaffold": "^9.5",
         "drupal/core-project-message": "^9.5",
-        "drupal/core-recommended": "^9.5"
+        "drupal/core-recommended": "^9.5",
+        "drupal/entity_print": "2.11",
+        "drupal/webform": "6.1",
+        "wikimedia/composer-merge-plugin": "^2.1"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -30,7 +35,8 @@
             "composer/installers": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "wikimedia/composer-merge-plugin": true
         },
         "sort-packages": true
     },
@@ -90,5 +96,8 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "require-dev": {
+        "drush/drush": "^11.5"
     }
 }

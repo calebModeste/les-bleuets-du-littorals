@@ -1,0 +1,14 @@
+uuid: e1a283b3-b74d-4a98-91cb-b336c623217a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.professeur
+  module:
+    - user
+id: user_remove_role_action.professeur
+label: 'Enlever le rôle professeur des utilisateurs sélectionnés'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: professeur

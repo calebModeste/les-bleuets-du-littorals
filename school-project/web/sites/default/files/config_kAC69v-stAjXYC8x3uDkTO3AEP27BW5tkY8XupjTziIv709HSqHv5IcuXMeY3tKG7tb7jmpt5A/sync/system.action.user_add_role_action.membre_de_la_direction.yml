@@ -1,0 +1,14 @@
+uuid: bb3d7131-18e7-41a5-8949-b669f9ffb916
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.membre_de_la_direction
+  module:
+    - user
+id: user_add_role_action.membre_de_la_direction
+label: 'Ajouter le rôle membre de la direction aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: membre_de_la_direction

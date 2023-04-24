@@ -303,7 +303,7 @@ $settings['update_free_access'] = FALSE;
  * @see \Drupal\update\UpdateFetcher
  * @see \Drupal\system\SecurityAdvisories\SecurityAdvisoriesFetcher
  */
-# $settings['update_fetch_with_http_fallback'] = TRUE;
+ $settings['update_fetch_with_http_fallback'] = TRUE;
 
 /**
  * External access proxy settings:

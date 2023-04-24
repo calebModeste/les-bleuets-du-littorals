@@ -1,0 +1,9 @@
+uuid: 5356d93b-3cd2-4a42-ae81-c7c06ced2fd3
+langcode: fr
+status: true
+dependencies: {  }
+id: tuteur
+label: tuteur
+weight: 5
+is_admin: null
+permissions: {  }

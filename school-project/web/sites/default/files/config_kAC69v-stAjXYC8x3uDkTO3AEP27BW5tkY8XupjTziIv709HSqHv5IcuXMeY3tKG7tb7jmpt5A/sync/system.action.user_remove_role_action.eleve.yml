@@ -1,0 +1,14 @@
+uuid: d16b3e09-35aa-44c1-b8e2-42bfbd9133ac
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.eleve
+  module:
+    - user
+id: user_remove_role_action.eleve
+label: 'Enlever le rôle élève des utilisateurs sélectionnés'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: eleve

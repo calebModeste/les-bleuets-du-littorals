@@ -1,0 +1,9 @@
+uuid: bd2758a4-41f9-460d-b0da-2499dbc3f097
+langcode: fr
+status: true
+dependencies: {  }
+id: eleve
+label: élève
+weight: 7
+is_admin: null
+permissions: {  }

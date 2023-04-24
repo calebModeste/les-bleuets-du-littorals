@@ -1,0 +1,9 @@
+uuid: d797d5bd-7f50-4efd-8c32-daaf501d8d84
+langcode: fr
+status: true
+dependencies: {  }
+id: membre_de_la_direction
+label: 'membre de la direction'
+weight: 4
+is_admin: null
+permissions: {  }

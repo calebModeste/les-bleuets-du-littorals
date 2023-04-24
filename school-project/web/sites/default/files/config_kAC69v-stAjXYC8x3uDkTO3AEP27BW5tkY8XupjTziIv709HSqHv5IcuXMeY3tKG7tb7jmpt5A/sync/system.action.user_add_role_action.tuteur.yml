@@ -1,0 +1,14 @@
+uuid: 92cb1dc1-edcf-46d9-84c2-fe17a2ab9abd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.tuteur
+  module:
+    - user
+id: user_add_role_action.tuteur
+label: 'Ajouter le rôle tuteur aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: tuteur

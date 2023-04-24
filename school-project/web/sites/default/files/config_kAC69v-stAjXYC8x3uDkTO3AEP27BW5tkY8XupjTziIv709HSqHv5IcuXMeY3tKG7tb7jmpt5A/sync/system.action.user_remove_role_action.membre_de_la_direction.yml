@@ -1,0 +1,14 @@
+uuid: a9408a02-189e-47a8-9e5d-2b7ffd5257ec
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.membre_de_la_direction
+  module:
+    - user
+id: user_remove_role_action.membre_de_la_direction
+label: 'Enlever le rôle membre de la direction des utilisateurs sélectionnés'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: membre_de_la_direction
