@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b2afecf1c6a58a60afe3da4e55bba2be",
+    "content-hash": "34a204e5d14c6990a9f8ab7dc898267e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -665,6 +665,110 @@
             }
         },
         {
+            "name": "drupal/bootstrap5",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bootstrap5.git",
+                "reference": "3.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bootstrap5-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "6c015e662ed329b95d1ab55ea9ab1121be425023"
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0",
+                    "datestamp": "1675066998",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Vladimir Roudakov (vladimiraus)",
+                    "homepage": "https://www.drupal.org/u/vladimiraus",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "VladimirAus",
+                    "homepage": "https://www.drupal.org/user/673120"
+                }
+            ],
+            "description": "Master theme using Bootstrap 5: powerful front-end framework for faster and easier web development.",
+            "homepage": "https://www.drupal.org/project/bootstrap5",
+            "support": {
+                "source": "https://git.drupalcode.org/project/bootstrap5",
+                "issues": "https://www.drupal.org/project/issues/bootstrap5"
+            }
+        },
+        {
+            "name": "drupal/bootstrap_barrio",
+            "version": "5.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bootstrap_barrio.git",
+                "reference": "5.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-5.1.0.zip",
+                "reference": "5.1.0",
+                "shasum": "2a0ac73c2cc3285226ffc2cf2b4fc2354c4af241"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "twbs/bootstrap": "^4.4.1"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "drupal": {
+                    "version": "5.1.0",
+                    "datestamp": "1597668835",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Alberto Siles",
+                    "homepage": "https://www.drupal.org/user/827704",
+                    "email": "alberto@siles.pe"
+                },
+                {
+                    "name": "Ricardo.Castaneda",
+                    "homepage": "https://www.drupal.org/user/3520894"
+                },
+                {
+                    "name": "WillAcon",
+                    "homepage": "https://www.drupal.org/user/2824325"
+                }
+            ],
+            "description": "Bootstrap 4 base theme.",
+            "homepage": "https://www.drupal.org/project/bootstrap_barrio",
+            "support": {
+                "source": "https://git.drupalcode.org/project/bootstrap_barrio"
+            }
+        },
+        {
             "name": "drupal/captcha",
             "version": "1.10.0",
             "source": {
@@ -746,6 +850,50 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/captcha",
                 "issues": "https://www.drupal.org/project/issues/captcha"
+            }
+        },
+        {
+            "name": "drupal/ckeditor_bs_grid",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ckeditor_bs_grid.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ckeditor_bs_grid-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "6b95ea55444ec11b2cddd4d2cea63a737c402e7b"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1594928801",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "b_sharpe",
+                    "homepage": "https://www.drupal.org/user/2512258"
+                }
+            ],
+            "description": "Ckeditor plugin for adding Bootstrap grids inline",
+            "homepage": "https://www.drupal.org/project/ckeditor_bs_grid",
+            "support": {
+                "source": "https://git.drupalcode.org/project/ckeditor_bs_grid"
             }
         },
         {
@@ -5192,6 +5340,61 @@
                 }
             ],
             "time": "2022-08-02T15:47:23+00:00"
+        },
+        {
+            "name": "twbs/bootstrap",
+            "version": "v4.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "e5643aaa89eb67327a5b4abe7db976f0ea276b70"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/e5643aaa89eb67327a5b4abe7db976f0ea276b70",
+                "reference": "e5643aaa89eb67327a5b4abe7db976f0ea276b70",
+                "shasum": ""
+            },
+            "replace": {
+                "twitter/bootstrap": "self.version"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                },
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                }
+            ],
+            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+            "homepage": "https://getbootstrap.com/",
+            "keywords": [
+                "JS",
+                "css",
+                "framework",
+                "front-end",
+                "mobile-first",
+                "responsive",
+                "sass",
+                "web"
+            ],
+            "support": {
+                "issues": "https://github.com/twbs/bootstrap/issues",
+                "source": "https://github.com/twbs/bootstrap/tree/v4.6.2"
+            },
+            "time": "2022-07-19T15:13:44+00:00"
         },
         {
             "name": "twig/twig",

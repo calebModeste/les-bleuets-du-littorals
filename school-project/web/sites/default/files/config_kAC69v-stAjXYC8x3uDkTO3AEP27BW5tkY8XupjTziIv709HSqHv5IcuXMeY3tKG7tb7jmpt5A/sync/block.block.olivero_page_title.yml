@@ -2,13 +2,15 @@ uuid: 3a47f6fe-74c2-4d7d-8d7a-4b89524fb613
 langcode: fr
 status: true
 dependencies:
+  module:
+    - webform
   theme:
     - olivero
 _core:
   default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
 id: olivero_page_title
 theme: olivero
-region: content_above
+region: content
 weight: -5
 provider: null
 plugin: page_title_block
@@ -17,4 +19,11 @@ settings:
   label: 'Titre de page'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  'entity_bundle:webform_submission':
+    id: 'entity_bundle:webform_submission'
+    negate: false
+    context_mapping:
+      webform_submission: '@webform.webform_submission_route_context:webform_submission'
+    bundles:
+      inscription: inscription

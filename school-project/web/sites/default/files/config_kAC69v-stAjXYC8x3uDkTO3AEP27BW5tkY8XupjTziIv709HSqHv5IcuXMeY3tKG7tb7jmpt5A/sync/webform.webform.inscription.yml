@@ -1,7 +1,20 @@
 uuid: 9f171519-905f-4349-ae8e-9b24e29a9cde
 langcode: fr
 status: open
-dependencies: {  }
+dependencies:
+  module:
+    - webform_entity_print
+third_party_settings:
+  webform_entity_print:
+    template:
+      header: ''
+      footer: ''
+      css: ''
+    export_types:
+      pdf:
+        enabled: true
+        link_text: ''
+        link_attributes: {  }
 weight: 0
 open: null
 close: null
@@ -19,29 +32,36 @@ elements: |-
     '#prev_button_label': revenir
     '#next_button_label': suivent
     '#custom_data': candidat
-    nom_eleve:
-      '#type': textfield
-      '#title': 'nom élève'
-      '#required': true
-      '#counter_type': character
-      '#counter_minimum': 2
-      '#counter_maximum': 20
-    prenom_eleve:
-      '#type': textfield
-      '#title': 'prenom élève'
-      '#required': true
-      '#counter_type': word
-      '#counter_minimum': 2
-      '#counter_maximum': 20
+    flexbox_01:
+      '#type': webform_flexbox
+      nom_eleve:
+        '#type': textfield
+        '#title': 'nom élève'
+        '#required': true
+        '#counter_type': character
+        '#counter_minimum': 2
+        '#counter_maximum': 20
+      prenom_eleve:
+        '#type': textfield
+        '#title': 'prenom élève'
+        '#required': true
+        '#counter_type': character
+        '#counter_minimum': 2
+        '#counter_maximum': 20
     email_eleve:
       '#type': webform_email_confirm
       '#title': 'email élève'
-      '#required': true
       '#confirm__title': email_eleve
-    date_d_anniversaire_eleve:
-      '#type': date
-      '#title': 'date d''anniversaire'
-      '#required': true
+    flexbox_02:
+      '#type': webform_flexbox
+      telephone_eleve:
+        '#type': tel
+        '#title': 'telephone élève'
+        '#required': true
+      date_d_anniversaire_eleve:
+        '#type': date
+        '#title': 'date d''anniversaire'
+        '#required': true
     adresse_eleve:
       '#type': webform_address
       '#title': 'adresse élève'
@@ -58,7 +78,7 @@ elements: |-
         2: préscolaire
         3: primaire
         4: collège
-      '#empty_option': '0'
+      '#empty_option': 'quel est votre niveau scolaire'
       '#empty_value': 'quel est votre niveau scolaire'
       '#required': true
   information_tuteur:
@@ -68,29 +88,37 @@ elements: |-
     '#prev_button_label': revenir
     '#next_button_label': suivent
     '#custom_data': candidat
-    nom_tuteur:
-      '#type': textfield
-      '#title': 'nom tuteur'
-      '#required': true
-      '#counter_type': character
-      '#counter_minimum': 2
-      '#counter_maximum': 20
-    prenom_tuteur:
-      '#type': textfield
-      '#title': 'prenom tuteur'
-      '#required': true
-      '#counter_type': word
-      '#counter_minimum': 2
-      '#counter_maximum': 20
+    flexbox_03:
+      '#type': webform_flexbox
+      nom_tuteur:
+        '#type': textfield
+        '#title': 'nom tuteur'
+        '#required': true
+        '#counter_type': character
+        '#counter_minimum': 2
+        '#counter_maximum': 20
+      prenom_tuteur:
+        '#type': textfield
+        '#title': 'prenom tuteur'
+        '#required': true
+        '#counter_type': character
+        '#counter_minimum': 2
+        '#counter_maximum': 20
     email_tuteur:
       '#type': webform_email_confirm
       '#title': 'email tuteur'
       '#required': true
       '#confirm__title': email_eleve
-    date_d_anniversaire_tuteur:
-      '#type': date
-      '#title': 'date d''anniversaire'
-      '#required': true
+    flexbox_04:
+      '#type': webform_flexbox
+      telephone_tuteur:
+        '#type': tel
+        '#title': 'telephone tuteur'
+        '#required': true
+      date_d_anniversaire_tuteur:
+        '#type': date
+        '#title': 'date d''anniversaire'
+        '#required': true
     adresse_tuteur:
       '#type': webform_address
       '#title': 'adresse tuteur'
@@ -99,7 +127,6 @@ elements: |-
       '#city__required': true
       '#state_province__access': false
       '#country__required': true
-      '#required': true
   bulletin:
     '#type': webform_wizard_page
     '#title': bulletin
@@ -107,23 +134,9 @@ elements: |-
     '#prev_button_label': revenir
     '#next_button_label': suivent
     '#custom_data': candidat
-    bulletin_1:
-      '#type': managed_file
-      '#title': bulletin
-      '#required': true
-      '#file_preview': id
-      '#max_filesize': '25'
-      '#sanitize': true
-    bulletin_2:
-      '#type': managed_file
-      '#title': bulletin
-      '#required': true
-      '#file_preview': id
-      '#max_filesize': '25'
-      '#sanitize': true
-    bulletin_3:
-      '#type': managed_file
-      '#title': bulletin
+    bulletins:
+      '#type': webform_document_file
+      '#title': bulletins
       '#required': true
       '#file_preview': id
       '#max_filesize': '25'
@@ -136,8 +149,9 @@ elements: |-
     '#next_button_label': suivent
     terms_of_service:
       '#type': webform_terms_of_service
-      '#title': 'je suis d''accord avec les terme du {terms of service}.'
+      '#title': 'click ici pour lire {terms of service} cochez pour valider que vous avez lu.'
       '#required': true
+      '#terms_type': slideout
       '#terms_title': contract
       '#terms_content': |-
         <h1>Lorem Ipsum</h1>
@@ -179,14 +193,13 @@ elements: |-
         </div>
     captcha:
       '#type': captcha
+      '#captcha_type': image_captcha/Image
       '#captcha_admin_mode': true
     siganture:
       '#type': webform_signature
       '#title': siganture
-      '#unique': true
-      '#unique_user': true
-      '#uri_scheme': private
       '#required': true
+      '#uri_scheme': private
 css: ''
 javascript: ''
 settings:
@@ -198,8 +211,8 @@ settings:
   page: true
   page_submit_path: ''
   page_confirm_path: ''
-  page_theme_name: ''
-  form_title: both
+  page_theme_name: gin
+  form_title: source_entity_webform
   form_submit_once: false
   form_open_message: ''
   form_close_message: ''
@@ -241,11 +254,37 @@ settings:
   submission_locked_message: ''
   submission_log: false
   submission_excluded_elements: {  }
-  submission_exclude_empty: false
+  submission_exclude_empty: true
   submission_exclude_empty_checkbox: false
   submission_views: {  }
   submission_views_replace: {  }
-  submission_user_columns: {  }
+  submission_user_columns:
+    - serial
+    - created
+    - remote_addr
+    - element__nom_eleve
+    - element__prenom_eleve
+    - element__email_eleve
+    - element__date_d_anniversaire_eleve
+    - element__adresse_eleve
+    - element__adresse_eleve__address
+    - element__adresse_eleve__city
+    - element__adresse_eleve__postal_code
+    - element__adresse_eleve__country
+    - element__class
+    - element__nom_tuteur
+    - element__prenom_tuteur
+    - element__email_tuteur
+    - element__date_d_anniversaire_tuteur
+    - element__adresse_tuteur
+    - element__adresse_tuteur__address
+    - element__adresse_tuteur__city
+    - element__adresse_tuteur__postal_code
+    - element__adresse_tuteur__country
+    - element__bulletins
+    - element__telephone_eleve
+    - element__telephone_tuteur
+    - element__siganture
   submission_user_duplicate: false
   submission_access_denied: default
   submission_access_denied_title: ''
@@ -276,12 +315,14 @@ settings:
   wizard_toggle_hide_label: ''
   wizard_page_type: container
   wizard_page_title_tag: h2
-  preview: 0
-  preview_label: ''
-  preview_title: ''
+  preview: 2
+  preview_label: verification
+  preview_title: verification
   preview_message: ''
   preview_attributes: {  }
-  preview_excluded_elements: {  }
+  preview_excluded_elements:
+    terms_of_service: terms_of_service
+    captcha: captcha
   preview_exclude_empty: true
   preview_exclude_empty_checkbox: false
   draft: none
@@ -291,10 +332,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: url_message
+  confirmation_type: message
   confirmation_url: /node
-  confirmation_title: ''
-  confirmation_message: ''
+  confirmation_title: Reussit
+  confirmation_message: 'Votre demande a &eacute;t&eacute; soumisse, vous receverez des informations&nbsp; sur l&#39;&eacute;volution du dossier dans les jours qui suivent'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -306,8 +347,8 @@ settings:
   limit_total_interval: null
   limit_total_message: ''
   limit_total_unique: false
-  limit_user: null
-  limit_user_interval: null
+  limit_user: 4
+  limit_user_interval: 60
   limit_user_message: ''
   limit_user_unique: false
   entity_limit_total: null
@@ -319,9 +360,9 @@ settings:
   results_disabled: false
   results_disabled_ignore: false
   results_customize: false
-  token_view: false
-  token_update: false
-  token_delete: false
+  token_view: true
+  token_update: true
+  token_delete: true
   serial_disabled: false
 access:
   create:

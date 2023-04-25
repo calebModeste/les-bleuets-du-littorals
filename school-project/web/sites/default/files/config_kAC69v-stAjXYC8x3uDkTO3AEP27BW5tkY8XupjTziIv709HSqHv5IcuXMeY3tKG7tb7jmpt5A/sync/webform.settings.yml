@@ -12,7 +12,7 @@ settings:
   default_delete_button_label: Delete
   default_form_submit_once: false
   default_form_open_message: 'This form has not yet been opened to submissions.'
-  default_form_close_message: 'Sorry… This form is closed to new submissions.'
+  default_form_close_message: 'Sorry&hellip; This form is closed to new submissions.'
   default_form_exception_message: 'Unable to display this webform. Please contact the site administrator.'
   default_form_confidential_message: 'This form is confidential. You must <a href="[site:login-url]/logout?destination=[current-page:url:relative]">Log out</a> to submit it.'
   default_form_access_denied_message: 'Please login to access this form.'
@@ -36,7 +36,7 @@ settings:
   default_preview_prev_button_label: '< Previous'
   default_preview_label: Preview
   default_preview_title: '[webform:title]: Preview'
-  default_preview_message: 'Please review your submission. Your submission is not complete until you press the "Submit" button!'
+  default_preview_message: 'Please review your submission. Your submission is not complete until you press the &quot;Submit&quot; button!'
   default_draft_button_label: 'Save Draft'
   default_draft_saved_message: 'Submission saved. You may return to this form later and it will restore the current values.'
   default_draft_loaded_message: 'A partially-completed form was found. Please complete the remaining portions.'
@@ -199,11 +199,10 @@ mail:
   roles: {  }
 export:
   temp_directory: ''
-  exporter: delimited
-  delimiter: ','
+  exporter: json
   multiple_delimiter: ;
-  excel: false
   archive_type: tar
+  file_name: 'submission-[webform_submission:serial]'
   header_format: label
   header_prefix: true
   header_prefix_key_delimiter: __
@@ -351,4 +350,4 @@ third_party_settings:
         link_attributes:
           class:
             - button
-    debug: false
+    debug: true

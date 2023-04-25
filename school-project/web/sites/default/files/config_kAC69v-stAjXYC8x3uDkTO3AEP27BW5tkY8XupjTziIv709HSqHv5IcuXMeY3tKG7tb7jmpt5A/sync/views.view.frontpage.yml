@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.rss
-    - core.entity_view_mode.node.teaser
   module:
     - node
     - user
@@ -238,7 +237,8 @@ display:
       row:
         type: 'entity:node'
         options:
-          view_mode: teaser
+          relationship: none
+          view_mode: default
       query:
         type: views_query
         options:
@@ -301,7 +301,16 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: node
+      path: acceuil
+      menu:
+        type: none
+        title: 's''inscrire'
+        description: ''
+        weight: 0
+        expanded: true
+        menu_name: main
+        parent: standard.front_page
+        context: '0'
     cache_metadata:
       max-age: -1
       contexts:

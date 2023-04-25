@@ -11,6 +11,7 @@ module:
   breakpoint: 0
   captcha: 0
   ckeditor5: 0
+  ckeditor_bs_grid: 0
   comment: 0
   config: 0
   contact: 0
@@ -71,4 +72,7 @@ module:
 theme:
   olivero: 0
   claro: 0
+  gin: 0
+  stable9: 0
+  bootstrap5: 0
 profile: standard
